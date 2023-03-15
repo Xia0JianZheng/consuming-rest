@@ -8,13 +8,13 @@
 </head>
 <body>
     <div class="container-fluid boder pt-2 d-flex justify-content-center">
-        <div class="card" style="width: 15rem;">
-            <img class="card-img-top" src="https://source.unsplash.com/random">
-            <div class="card-body">
-                <h5 class="card-title">Quote of the day</h5>
-                <p class="card-text" th:text="${frase}"></p>
-                <a href="#" class="btn btn-primary" pnclick="window.location.reload();">Refresh</a>
-            </div>
+        <table>
+            <tr>
+                <p class="card-text" th:text="${any}"></p>
+            </tr>
+        </table>
+
+
         </div>
     </div>
 </body>
