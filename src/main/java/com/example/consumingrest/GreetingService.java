@@ -8,7 +8,7 @@ import java.lang.reflect.Array;
 @Service
 public class GreetingService {
     RestTemplate restTemplate = new RestTemplate();
-    public  PopulationQuote[] gerPopulationQuote() {
+    public  PopulationQuote[] getPopulationQuote() {
 
         PopulationQuote[] quote = restTemplate.getForObject(
                 "https://analisi.transparenciacatalunya.cat/resource/b4rr-d25b.json", PopulationQuote[].class);

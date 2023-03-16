@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{webjars/bootstrap/5.2.3/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+    <title>Population Data</title>
+    <style>
+        table {
+          border-collapse: collapse;
+          width: 100%;
+        }
+
+        th, td {
+          text-align: left;
+          padding: 8px;
+          border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<h1>Population Data</h1>
+<table border="1">
+    <thead>
+    <tr>
+        <th>Any</th>
+        <th>Codi</th>
+        <th>Literal</th>
+        <th>Homes de 0 a 14 anys</th>
+        <th>Homes de 15 a 64 anys</th>
+        <th>Homes de 65 anys i més</th>
+        <th>Dones de 0 a 14 anys</th>
+        <th>Dones de 15 a 64 anys</th>
+        <th>Dones de 65 anys i més</th>
+        <th>Total de 0 a 14 anys</th>
+        <th>Total de 15 a 64 anys</th>
+        <th>Total de 65 anys i més</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="quote : ${populationQuotes}">
+        <td th:text="${quote.any}" />
+        <td th:text="${quote.codi}" />
+        <td th:text="${quote.literal}" />
+        <td th:text="${quote.homes_de_0_a_14_anys}" />
+        <td th:text="${quote.homes_de_15_a_64_anys}" />
+        <td th:text="${quote.homes_de_65_anys_i_m_s}" />
+        <td th:text="${quote.dones_de_0_a_14_anys}" />
+        <td th:text="${quote.dones_de_15_a_64_anys}" />
+        <td th:text="${quote.dones_de_65_anys_i_m_s}" />
+        <td th:text="${quote.total_de_0_a_14_anys}" />
+        <td th:text="${quote.total_de_15_a_64_anys}" />
+        <td th:text="${quote.total_de_65_anys_i_m_s}" />
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
+
